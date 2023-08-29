@@ -17,7 +17,7 @@
 
   <!-- style.css -->
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style_hidden.css" />
 
   <!-- hacker logo  -->
 
@@ -228,18 +228,21 @@
   <!-- contact section  -->
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
-    <form onsubmit="sendEmail(); reset(); return false;">
+    <form action="">
+
       <div class="input-box">
-        <input type="text" placeholder="Full Name" name="Name" id="name" required="required" />
-        <input type="email" placeholder="Email Address" name="Email" id="email" />
+        <input type="text" placeholder="Full Name" name="Name" id="name">
+        <input type="email" placeholder="Email Address" name="Email" id="email">
       </div>
+
       <div class="input-box">
-        <input type="phone" placeholder="Mobile Number" name="Phone" id="phone" required="required" />
-        <input type="text" placeholder="Email Subject" name="Subject" id="e-subject" required="required" />
+        <input type="phone" placeholder="Mobile Number" name="Phone" id="phone">
+        <input type="text" placeholder="Email Subject" name="Subject" id="e-subject">
       </div>
-      <textarea name="Content" id="message" cols="30" rows="10" placeholder="Your Message"
-        required="required"></textarea>
-      <input type="submit" value="send Message" class="btn" />
+
+      <textarea name="Content" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <input type="button" value="send Message" class="btn" onclick="Send()">
+
     </form>
   </section>
   <!-- footer design  -->
@@ -259,5 +262,7 @@
   <script src="js/script.js"></script>
   <!-- smtp js working contact form -->
   <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <!-- contact popup alert -->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
